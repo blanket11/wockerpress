@@ -1,4 +1,6 @@
 /.env
-/public
+/public/*
+!/public/wp-content
+/public/wp-content/*
 !/public/wp-content/plugins
 !/public/wp-content/themes
