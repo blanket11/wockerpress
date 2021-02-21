@@ -2,7 +2,7 @@ global:
   sql_adapter: default
 
 local:
-  vhost: "<%= LOCAL_PROTOCOL %>://localhost"
+  vhost: "<%= ENV['LOCAL_PROTOCOL'] %>://localhost"
   wordpress_path: "/var/www/html/"
   database:
     name: "wordpress"
