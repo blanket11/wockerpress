@@ -108,6 +108,8 @@ $ wordmove pull -e production --all
 $ wordmove push -e production --all
 ```
 
+---
+
 ## Example of checking email in a local environment
 
 ### 1 - Install the WordPress plugin "WP Mail SMTP by WPForms".
@@ -126,3 +128,5 @@ define( 'WPMS_SMTP_AUTH', false );
 define( 'WPMS_SMTP_AUTOTLS', false );
 define( 'WPMS_MAILER', 'smtp' );
 ```
+
+### 3- To confirm receipt of your email, please go to http://localhost:8025/.
