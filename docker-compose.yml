@@ -54,3 +54,9 @@ services:
       PRODUCTION_SSH_USER: "${PRODUCTION_SSH_USER}"
       PRODUCTION_SSH_PORT: "${PRODUCTION_SSH_PORT}"
       RUBYOPT: -EUTF-8
+  mailhog:
+    container_name: "${PROJECT_NAME}_mailhog"
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"
+      - "1025:1025"
