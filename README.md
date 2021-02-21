@@ -107,3 +107,22 @@ $ wordmove pull -e production --all
 ```
 $ wordmove push -e production --all
 ```
+
+## Example of checking email in a local environment
+
+### 1 - Install the WordPress plugin "WP Mail SMTP by WPForms".
+
+[WP Mail SMTP by WPForms](https://wordpress.org/plugins/wp-mail-smtp/)
+
+### 2 - Add the constant to wp-config.php in your local environment.
+Add it after `/* That's all, stop editing! Happy publishing. */`.
+
+```
+define( 'WPMS_ON', true );
+define( 'WPMS_SMTP_HOST', 'mailhog' );
+define( 'WPMS_SMTP_PORT', 1025 );
+define( 'WPMS_SSL', '' );
+define( 'WPMS_SMTP_AUTH', false );
+define( 'WPMS_SMTP_AUTOTLS', false );
+define( 'WPMS_MAILER', 'smtp' );
+```
