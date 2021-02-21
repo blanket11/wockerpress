@@ -1,6 +1,8 @@
 # wockerpress
 Local development environment for wordpress created with docker.
 
+---
+
 ## Overview
 
 ### 1 - Rename .env-example to .env .
@@ -17,6 +19,57 @@ $ docker-compose up -d
 
 ### 4 - Open your browser and visit localhost: http://localhost.
 
+
+---
+
+## SSL server certificate configuration.
+
+### 1 - Issue a certificate with mkcert
+
+You only need to do this once as this is done on your macPC.
+
+#### Install mkcert with homebrew.
+```
+$ brew install mkcert
+```
+
+
+#### Install nss with homebrew.
+(if you use Firefox.)
+
+```
+$ brew install nss
+```
+
+#### Install local CA.
+A local CA file will be generated in `/Users/username/Library/Application Support/mkcert`.
+```
+$ mkcert -install
+```
+
+### 2 - Issue a certificate for this project.
+
+#### Go to the `certs` directory
+```
+$ cd ./certs
+```
+
+#### Issue the certificate
+```
+$ mkcert localhost 127.0.0.1
+```
+
+
+### 3 - Run the shell script to reflect to the container.
+
+Run `/scripts/ssl.sh` in the project folder.
+
+```
+$ cd ../
+$ sh ./scripts/ssl.sh
+```
+
+---
 
 ## How to use wordmove.
 
