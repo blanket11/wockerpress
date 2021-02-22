@@ -9,6 +9,8 @@ services:
     ports:
       - "${LOCAL_DB_PORT}:3306"
     restart: on-failure:5
+    volumes:
+      - ./sql:/sql/
     container_name: "${PROJECT_NAME}_db"
     environment:
       MYSQL_USER: wordpress
