@@ -1,9 +1,10 @@
-!.keep
 /.DS_Store
 /.vscode
 /.env
+/certs
 /public/*
 !/public/wp-content
 /public/wp-content/*
 !/public/wp-content/plugins
 !/public/wp-content/themes
+!.keep
