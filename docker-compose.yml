@@ -27,6 +27,7 @@ services:
     volumes:
       - ./public:/var/www/html
       - ./certs:/etc/ssl/private
+    working_dir: "/var/www/html${WP_WORKING_DIR}"
     environment:
       WORDPRESS_DB_HOST: database:3306
       WORDPRESS_DB_PASSWORD: wordpress
