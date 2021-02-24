@@ -87,25 +87,25 @@ Use ssh-agent to configure the settings.
 
 Start ssh-agent.
 ```
-$ ssh-agent bash
+# ssh-agent bash
 ```
 
 Register ssh-agent.
 The path for id_rsa should match your environment.
 ```
-$ ssh-add /home/.ssh/id_rsa
+# ssh-add /home/.ssh/id_rsa
 ```
 
 ### 3 - Run wordmove.
 
 #### Pull production data.
 ```
-$ wordmove pull -e production --all
+# wordmove pull -e production --all
 ```
 
 ### Push production data.
 ```
-$ wordmove push -e production --all
+# wordmove push -e production --all
 ```
 
 ---
