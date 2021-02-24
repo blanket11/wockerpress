@@ -130,3 +130,21 @@ define( 'WPMS_MAILER', 'smtp' );
 ```
 
 ### 3- To confirm receipt of your email, please go to http://localhost:8025/.
+
+## How to backup SQL
+
+### Export SQL file
+
+Executing the dump.sh file will export a SQL file in the "sql" directory with the name "dump.sql".
+
+```
+$ sh ./scripts/dump.sh
+```
+
+### Importing SQL files
+
+Execute the import-sql.sh file to read the "dump.sql" file and import the SQL.
+
+```
+$ sh ./scripts/import-sql.sh
+```
