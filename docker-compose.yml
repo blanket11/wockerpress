@@ -45,7 +45,8 @@ services:
       - ./public:/var/www/html
       - ~/.ssh:/home/.ssh
     environment:
-      LOCAL_PROTOCOL: "${LOCAL_PROTOCOL}"
+      LOCAL_URL: "${LOCAL_URL}"
+      WP_WORKING_DIR: "${WP_WORKING_DIR}"
       PRODUCTION_URL: "${PRODUCTION_URL}"
       PRODUCTION_DIR_PATH: "${PRODUCTION_DIR_PATH}"
       PRODUCTION_DB_NAME: "${PRODUCTION_DB_NAME}"
